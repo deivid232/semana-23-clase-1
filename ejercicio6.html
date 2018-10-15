@@ -1,0 +1,66 @@
+<!-- Ejercicio 6:
+Se tiene la siguiente vista y script que incluye un arreglo. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+</head>
+<body>
+    <button class="btn" type="button" name="button" onclick="sortList()">Clasificar Arreglo</button>
+    <ul id="par">
+        <strong>Pares</strong>
+    </ul>
+    <ul id="impar">
+        <strong>Impares</strong>
+    </ul>
+    <ul id="string">
+        <strong>Strings</strong>
+    </ul>
+    <ul id="boolean">
+        <strong>Strings</strong>
+    </ul>
+    <script>
+        var a = document.getElementById('par')
+        var b = document.getElementById('impar')
+        var c = document.getElementById('string')
+        var d = document.getElementById('boolean')
+        var arr = [1,'dos','tres',4,5,6,'siete',8,9,'diez', true];
+        var sortList = function(){
+          arr.forEach(function(elemento){
+                if (typeof elemento === "string"){
+                  c.innerHTML += "<li>" + elemento + "</li>";
+                }
+                else if( typeof elemento === "number"){
+                  if( elemento % 2 === 0){
+                    a.innerHTML += "<li>" + elemento + "</li>";
+                  }
+                  else{
+                    b.innerHTML += "<li>" + elemento + "</li>";
+                  }
+
+                }
+                else if (typeof elemento === "boolean") {
+                  d.innerHTML += "<li>" + elemento + "</li>";
+
+                }
+
+
+              });
+        }
+    </script>
+</body>
+</html>
+<!-- <script type="text/javascript">
+var p = document.getElementById('lista');
+var arreglo = ["pera", "weed", 1, 2, 3, "hola"];
+//ordenar lista
+ Se requiere:
+Crear una función llamada sortList() la cual debe ser ejecutada al presionar el botón “Clasificar Arreglo”.
+
+La función debe iterar el arreglo:
+
+Si el elemento del array es un número impar debe ser agregado a la lista ‘Impares’.
+Si el elemento es un número par debe ser agregado a la lista ‘Pares’.
+Si el elemento es un string debe ser agregado a la lista ‘Strings’. -->

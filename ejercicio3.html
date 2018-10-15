@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ol id="dias"></ol>
+    <script type="text/javascript">
+    var p = document.getElementById('dias');
+    var arreglo = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
+    //ordenar lista
+    arreglo.forEach(function(elemento){
+      p.innerHTML += "<li>" + elemento + "</li>";
+
+    })
+    </script>
+
+  </body>
+</html>
